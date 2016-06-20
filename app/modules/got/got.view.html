@@ -1,0 +1,95 @@
+
+<div layout-gt-sm="row" class="got-header">
+    <div flex="25" class="got-header-poster">
+        <img ng-src="{{vm.gotserie.Poster}}" class="img-responsive" alt="Description" />
+    </div>
+
+    <div flex="75" class="got-header-content">
+        <h3 class="margin-bottom-half">{{vm.gotserie.Title}} ({{vm.gotserie.Year}})</h3>
+        <p>{{vm.gotserie.Plot}}</p>
+        <br>
+        <p><b>Got is an amazing TV Show. What is your favorite season?</b></p>
+
+        <md-radio-group ng-model="formData.GotSeason">
+            <md-radio-button value="GoT Season 1" class="got-radio md-primary"> 1 </md-radio-button>
+            <md-radio-button value="GoT Season 2" class="got-radio md-primary"> 2 </md-radio-button>
+            <md-radio-button value="GoT Season 3" class="got-radio md-primary"> 3 </md-radio-button>
+            <md-radio-button value="GoT Season 4" class="got-radio md-primary"> 4 </md-radio-button>
+            <md-radio-button value="GoT Season 5" class="got-radio md-primary"> 5 </md-radio-button>
+            <md-radio-button value="GoT Season 6" class="got-radio md-primary"> 6 </md-radio-button>
+        </md-radio-group>
+    </div>
+</div>
+
+<div class="table-holder" ng-show="formData.GotSeason">
+    <div layout-gt-sm="row" class="table-head">
+        <div flex="10" class="table-title">Episode</div>
+        <div flex="55" class="table-title">Name</div>
+        <div flex="15" class="table-title">Released</div>
+        <div flex="15" class="table-title">Imdb Rating</div>
+    </div>
+
+    <div layout-gt-sm="row" class="table-body" ng-repeat="episode in vm.gotseason1.Episodes" ng-show="formData.GotSeason == 'GoT Season 1' ">
+        <div flex="10"class="table-number">{{episode.Episode}}</div>
+        <div flex="55">{{episode.Title}}</div>
+        <div flex="15">{{episode.Released | date}}</div>
+        <div flex="15" class="table-number">{{episode.imdbRating}}</div>
+    </div>
+
+    <div layout-gt-sm="row" class="table-body" ng-repeat="episode in vm.gotseason2.Episodes" ng-show="formData.GotSeason == 'GoT Season 2' ">
+        <div flex="10" class="table-number">{{episode.Episode}}</div>
+        <div flex="55">{{episode.Title}}</div>
+        <div flex="15">{{episode.Released | date}}</div>
+        <div flex="15" class="table-number">{{episode.imdbRating}}</div>
+    </div>
+
+    <div layout-gt-sm="row" class="table-body" ng-repeat="episode in vm.gotseason3.Episodes" ng-show="formData.GotSeason == 'GoT Season 3' ">
+        <div flex="10" class="table-number">{{episode.Episode}}</div>
+        <div flex="55">{{episode.Title}}</div>
+        <div flex="15">{{episode.Released | date}}</div>
+        <div flex="15" class="table-number">{{episode.imdbRating}}</div>
+    </div>
+
+    <div layout-gt-sm="row" class="table-body" ng-repeat="episode in vm.gotseason4.Episodes" ng-show="formData.GotSeason == 'GoT Season 4' ">
+        <div flex="10" class="table-number">{{episode.Episode}}</div>
+        <div flex="55">{{episode.Title}}</div>
+        <div flex="15">{{episode.Released | date}}</div>
+        <div flex="15" class="table-number">{{episode.imdbRating}}</div>
+    </div>
+
+    <div layout-gt-sm="row" class="table-body" ng-repeat="episode in vm.gotseason5.Episodes" ng-show="formData.GotSeason == 'GoT Season 5' ">
+        <div flex="10" class="table-number">{{episode.Episode}}</div>
+        <div flex="55">{{episode.Title}}</div>
+        <div flex="15">{{episode.Released | date}}</div>
+        <div flex="15" class="table-number">{{episode.imdbRating}}</div>
+    </div>
+
+    <div layout-gt-sm="row" class="table-body" ng-repeat="episode in vm.gotseason6.Episodes" ng-show="formData.GotSeason == 'GoT Season 6' ">
+        <div flex="10" class="table-number">{{episode.Episode}}</div>
+        <div flex="55">{{episode.Title}}</div>
+        <div flex="15">{{episode.Released | date}}</div>
+        <div flex="15" class="table-number">{{episode.imdbRating}}</div>
+    </div>
+</div>
+
+<br>
+
+<md-divider></md-divider>
+
+<div layout-gt-sm="row">
+
+    <div flex="10">
+
+        <md-button class="md-raised md-primary" ui-sref-active="active" ui-sref="form.starwarsmovie">Back</md-button>
+    </div>
+
+    <div flex="90">
+        <!-- Spacer //-->
+    </div>
+
+    <div flex="10">
+
+        <md-button class="md-raised md-primary next-btn" ui-sref="form.food">Next</md-button>
+    </div>
+
+</div>

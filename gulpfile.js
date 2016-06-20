@@ -14,7 +14,7 @@ var browserSync = require('browser-sync');
 gulp.task('browser-sync', function() {
   browserSync({
     server: {
-       baseDir: "app/"
+      baseDir: "app/"
     }
   });
 });
@@ -25,8 +25,8 @@ gulp.task('bs-reload', function () {
 
 gulp.task('images', function(){
   gulp.src('app/assets/src/img/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('app/assets/build/img/'));
+      .pipe(cache(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
+      .pipe(gulp.dest('app/dist/img/'));
 });
 
 gulp.task('clear', function (done) {
@@ -35,33 +35,33 @@ gulp.task('clear', function (done) {
 
 gulp.task('styles', function(){
   gulp.src(['app/assets/src/scss/**/*.scss'])
-    .pipe(plumber({
-      errorHandler: function (error) {
-        console.log(error.message);
-        this.emit('end');
-    }}))
-    .pipe(sass())
-    .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('app/assets/build/css/'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(minifycss())
-    .pipe(gulp.dest('app/assets/build/css/'))
-    .pipe(browserSync.reload({stream:true}))
+      .pipe(plumber({
+        errorHandler: function (error) {
+          console.log(error.message);
+          this.emit('end');
+        }}))
+      .pipe(sass())
+      .pipe(autoprefixer('last 2 versions'))
+      .pipe(gulp.dest('app/assets/build/css/'))
+      .pipe(rename({suffix: '.min'}))
+      .pipe(minifycss())
+      .pipe(gulp.dest('app/dist/css/'))
+      .pipe(browserSync.reload({stream:true}))
 });
 
 gulp.task('scripts', function(){
   return gulp.src(['app/modules/**/*.module.js', 'app/modules/**/*.js', 'app/app.js'])
-    .pipe(plumber({
-      errorHandler: function (error) {
-        console.log(error.message);
-        this.emit('end');''
-    }}))
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(concat('app/app.js'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./'))
-    .pipe(browserSync.reload({stream:true}))
+      .pipe(plumber({
+        errorHandler: function (error) {
+          console.log(error.message);
+          this.emit('end');''
+        }}))
+      .pipe(jshint())
+      .pipe(jshint.reporter('default'))
+      .pipe(concat('app.js'))
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest('app/dist/js'))
+      .pipe(browserSync.reload({stream:true}))
 });
 
 gulp.task('default', ['browser-sync'], function(){

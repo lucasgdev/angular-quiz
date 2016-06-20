@@ -1,0 +1,84 @@
+<div layout-gt-sm="row">
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Your favorite comic book superhero</label>
+        <input name="name" ng-model="formData.superhero" disabled/>
+
+    </md-input-container>
+    <div flex="5" hide-xs hide-sm>
+        <!-- Spacer //-->
+    </div>
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Tv Series that you are currently watching</label>
+        <input name="social" ng-model="formData.series" disabled/>
+    </md-input-container>
+
+</div>
+
+<div layout-gt-sm="row">
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Wich onde do you use: Bolacha or biscoito?</label>
+        <input name="email" ng-model="formData.cookie" disabled/>
+    </md-input-container>
+
+    <div flex="5" hide-xs hide-sm>
+        <!-- Spacer //-->
+    </div>
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>What is the best quote ever</label>
+        <input name="phone" ng-model="formData.quote" disabled/>
+    </md-input-container>
+
+</div>
+
+
+<div layout-gt-sm="row">
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Your Favorite Star Wars Movie</label>
+        <input name="movie" ng-model="formData.swmovie" disabled/>
+    </md-input-container>
+
+    <div flex="5" hide-xs hide-sm>
+        <!-- Spacer //-->
+    </div>
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Your Favorite GoT Season</label>
+        <input name="got" ng-model="formData.GotSeason" disabled/>
+    </md-input-container>
+
+    <div flex="5" hide-xs hide-sm>
+        <!-- Spacer //-->
+    </div>
+
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Your kind of food</label>
+        <input name="got" ng-model="formData.Food" disabled/>
+    </md-input-container>
+
+</div>
+
+<br>
+
+<md-divider></md-divider>
+
+<div layout-gt-sm="row">
+
+    <div flex-gt-sm="10">
+
+        <md-button class="md-raised md-primary" ui-sref-active="active" ui-sref="form.gameofthrones">Back</md-button>
+    </div>
+
+    <div flex-gt-sm="90">
+        <!-- Spacer //-->
+    </div>
+
+    <div flex-gt-sm="10">
+
+        <md-button class="md-raised md-primary next-btn" ui-sref="form.review">Save</md-button>
+    </div>
+
+</div>

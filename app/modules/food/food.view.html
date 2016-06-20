@@ -1,0 +1,41 @@
+<div class="food-holder">
+
+<h3>Wich of these is yout favorite food?</h3>
+
+
+    <md-radio-group ng-model="formData.Food" class="food-group" layout-gt-sm="row" layout-wrap layout-align="center center">
+        <md-radio-button
+                ng-repeat="food in vm.foods.items"
+                ng-value="food.title"
+                class="food-radio md-primary" flex="20">
+            <div class="food-image">
+                <img ng-src="{{food.image}}" class="img-responsive" alt="Food Image" />
+            </div>
+
+            <p>{{food.title}}</p>
+        </md-radio-button>
+    </md-radio-group>
+
+</div>
+
+<br>
+
+<md-divider></md-divider>
+
+<div layout-gt-sm="row">
+
+    <div flex-gt-sm="10">
+
+        <md-button class="md-raised md-primary" ui-sref-active="active" ui-sref="form.gameofthrones">Back</md-button>
+    </div>
+
+    <div flex-gt-sm="90">
+        <!-- Spacer //-->
+    </div>
+
+    <div flex-gt-sm="10">
+
+        <md-button class="md-raised md-primary next-btn" ui-sref="form.review">Next</md-button>
+    </div>
+
+</div>

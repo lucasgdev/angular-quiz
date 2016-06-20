@@ -1,0 +1,21 @@
+
+<md-content layout-padding class="md-whiteframe-1dp content" flex="70" flex-xs="100">
+
+    <div class="page-header text-center">
+        <!-- the links to our nested states using relative paths -->
+        <!-- add the active class if the state matches our ui-sref -->
+        <div id="status-buttons" class="text-center" layout-gt-sm="row">
+            <a flex-gt-sm ui-sref-active="active" ui-sref=".profile"><span>1</span></a>
+            <a flex-gt-sm ui-sref-active="active" ui-sref=".starwarsmovie"><span>2</span></a>
+            <a flex-gt-sm ui-sref-active="active" ui-sref=".gameofthrones"><span>3</span></a>
+            <a flex-gt-sm ui-sref-active="active" ui-sref=".food"><span>4</span></a>
+            <a flex-gt-sm ui-sref-active="active" ui-sref=".review"><span>5</span></a>
+        </div>
+    </div>
+
+    <form name="userForm" ng-submit="processForm()">
+
+        <div id="form-views" ui-view></div>
+    </form>
+
+</md-content>

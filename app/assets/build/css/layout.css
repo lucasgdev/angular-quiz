@@ -56,6 +56,9 @@ h3 {
 .next-btn {
   float: right; }
 
+.prev-btn {
+  float: left; }
+
 .content {
   padding: 20px 35px 10px; }
 
@@ -86,6 +89,20 @@ h3 {
   #status-buttons a.active span {
     background: #f44336;
     border-radius: 25%; }
+
+.table-holder .table-head {
+  margin: 20px 0 0;
+  background-color: #c6c6c6; }
+  .table-holder .table-head .table-title {
+    font-weight: bold;
+    border-bottom: 1px solid #c6c6c6;
+    padding: 10px 14px; }
+
+.table-holder .table-body {
+  padding: 5px 0 5px 20px;
+  background-color: #f5f5f5; }
+  .table-holder .table-body .table-number {
+    text-align: center; }
 
 #form-views {
   width: auto; }
@@ -141,4 +158,19 @@ h3 {
 @media screen and (max-width: 960px) {
   .movie-item {
     margin: 0 15px 0 0 !important;
-    display: inline-block; } }
+    display: inline-block; }
+  .got-header .got-header-poster {
+    margin-bottom: 10px; }
+  .got-header .got-header-content {
+    padding: 0; }
+  .table-holder {
+    background-color: #f5f5f5; }
+    .table-holder .table-body .episode-col {
+      text-align: center;
+      height: 50px !important; }
+    .table-holder .table-body .released-col {
+      text-align: center; }
+    .table-holder .table-body .table-number {
+      font-weight: 700; }
+  .table-head h3 {
+    margin: 25px 0 15px; } }

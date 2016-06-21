@@ -112,6 +112,10 @@ h3 {
   float: right;
 }
 
+.prev-btn {
+  float: left;
+}
+
 .content {
   padding: 20px 35px 10px;
 }
@@ -159,6 +163,31 @@ h3 {
   }
 }
 
+
+///////// Table
+
+.table-holder {
+  .table-head {
+
+    margin: 20px 0 0;
+    background-color: #c6c6c6;
+
+    .table-title {
+      font-weight: bold;
+      border-bottom: 1px solid #c6c6c6;
+      padding: 10px 14px;
+    }
+  }
+
+  .table-body {
+    padding: 5px 0 5px 20px;
+    background-color: #f5f5f5;
+
+    .table-number {
+      text-align: center;
+    }
+  }
+}
 
 ///////// Animations
 
@@ -225,5 +254,46 @@ h3 {
     margin: 0 15px 0 0 !important;
     display: inline-block;
   }
+
+  ///////////////////////////////////////// GOT
+
+  .got-header {
+    .got-header-poster {
+      margin-bottom: 10px;
+    }
+
+    .got-header-content {
+      padding: 0;
+    }
+  }
+
+
+  //Table
+
+  .table-holder {
+    background-color: #f5f5f5;
+
+    .table-body {
+
+      .episode-col {
+        text-align: center;
+        height: 50px !important;
+      }
+      .released-col {
+        text-align: center;
+      }
+
+      .table-number {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .table-head {
+    h3 {
+      margin: 25px 0 15px;
+    }
+  }
+
 
 }

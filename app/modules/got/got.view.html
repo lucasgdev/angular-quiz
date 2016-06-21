@@ -1,10 +1,10 @@
 
 <div layout-gt-sm="row" class="got-header">
-    <div flex="25" class="got-header-poster">
+    <div flex-gt-sm="25" class="got-header-poster">
         <img ng-src="{{vm.gotserie.Poster}}" class="img-responsive" alt="Description" />
     </div>
 
-    <div flex="75" class="got-header-content">
+    <div flex-gt-sm="75" flex-sm="100" flex-xs="100" class="got-header-content">
         <h3 class="margin-bottom-half">{{vm.gotserie.Title}} ({{vm.gotserie.Year}})</h3>
         <p>{{vm.gotserie.Plot}}</p>
         <br>
@@ -21,54 +21,58 @@
     </div>
 </div>
 
-<div class="table-holder" ng-show="formData.GotSeason">
-    <div layout-gt-sm="row" class="table-head">
-        <div flex="10" class="table-title">Episode</div>
-        <div flex="55" class="table-title">Name</div>
-        <div flex="15" class="table-title">Released</div>
-        <div flex="15" class="table-title">Imdb Rating</div>
+<div layout-gt-sm="row" ng-show="formData.GotSeason" class="table-head" show-xs show-sm>
+    <h3>Episodes:</h3>
+</div>
+
+<div class="table-holder" ng-show="formData.GotSeason" layout-sm="row" layout-wrap layout-align="center center">
+    <div layout-gt-sm="row" class="table-head" hide-xs hide-sm>
+        <div flex-gt-sm="10" class="table-title">Episode</div>
+        <div flex-gt-sm="55" class="table-title">Name</div>
+        <div flex-gt-sm="15" class="table-title">Released</div>
+        <div flex-gt-sm="15" class="table-title">Imdb Rating</div>
     </div>
 
-    <div layout-gt-sm="row" class="table-body" ng-repeat="episode in vm.gotseason1.Episodes" ng-show="formData.GotSeason == 'GoT Season 1' ">
-        <div flex="10"class="table-number">{{episode.Episode}}</div>
-        <div flex="55">{{episode.Title}}</div>
-        <div flex="15">{{episode.Released | date}}</div>
-        <div flex="15" class="table-number">{{episode.imdbRating}}</div>
+    <div layout-gt-sm="row" layout-sm="column" class="table-body" ng-repeat="episode in vm.gotseason1.Episodes" flex-sm="30" ng-show="formData.GotSeason == 'GoT Season 1' ">
+        <div flex-gt-sm="10" flex-sm="5" class="table-number">{{episode.Episode}}</div>
+        <div flex-gt-sm="55" flex-sm="10" class="episode-col">{{episode.Title}}</div>
+        <div flex-gt-sm="15" class="released-col" hide-xs hide-sm>{{episode.Released | date}}</div>
+        <div flex-gt-sm="15" class="table-number" hide-xs hide-sm>{{episode.imdbRating}}</div>
     </div>
 
-    <div layout-gt-sm="row" class="table-body" ng-repeat="episode in vm.gotseason2.Episodes" ng-show="formData.GotSeason == 'GoT Season 2' ">
-        <div flex="10" class="table-number">{{episode.Episode}}</div>
-        <div flex="55">{{episode.Title}}</div>
-        <div flex="15">{{episode.Released | date}}</div>
-        <div flex="15" class="table-number">{{episode.imdbRating}}</div>
+    <div layout-gt-sm="row" layout-sm="column" class="table-body" ng-repeat="episode in vm.gotseason2.Episodes" flex-sm="30" ng-show="formData.GotSeason == 'GoT Season 2' ">
+        <div flex-gt-sm="10" flex-sm="5" class="table-number">{{episode.Episode}}</div>
+        <div flex-gt-sm="55" flex-sm="10" class="episode-col">{{episode.Title}}</div>
+        <div flex-gt-sm="15" class="released-col" hide-xs hide-sm>{{episode.Released | date}}</div>
+        <div flex-gt-sm="15" class="table-number" hide-xs hide-sm>{{episode.imdbRating}}</div>
     </div>
 
-    <div layout-gt-sm="row" class="table-body" ng-repeat="episode in vm.gotseason3.Episodes" ng-show="formData.GotSeason == 'GoT Season 3' ">
-        <div flex="10" class="table-number">{{episode.Episode}}</div>
-        <div flex="55">{{episode.Title}}</div>
-        <div flex="15">{{episode.Released | date}}</div>
-        <div flex="15" class="table-number">{{episode.imdbRating}}</div>
+    <div layout-gt-sm="row" layout-sm="column" class="table-body" ng-repeat="episode in vm.gotseason3.Episodes" flex-sm="30" ng-show="formData.GotSeason == 'GoT Season 3' ">
+        <div flex-gt-sm="10" flex-sm="5" class="table-number">{{episode.Episode}}</div>
+        <div flex-gt-sm="55" flex-sm="10" class="episode-col">{{episode.Title}}</div>
+        <div flex-gt-sm="15" class="released-col" hide-xs hide-sm>{{episode.Released | date}}</div>
+        <div flex-gt-sm="15" class="table-number" hide-xs hide-sm>{{episode.imdbRating}}</div>
     </div>
 
-    <div layout-gt-sm="row" class="table-body" ng-repeat="episode in vm.gotseason4.Episodes" ng-show="formData.GotSeason == 'GoT Season 4' ">
-        <div flex="10" class="table-number">{{episode.Episode}}</div>
-        <div flex="55">{{episode.Title}}</div>
-        <div flex="15">{{episode.Released | date}}</div>
-        <div flex="15" class="table-number">{{episode.imdbRating}}</div>
+    <div layout-gt-sm="row" layout-sm="column" class="table-body" ng-repeat="episode in vm.gotseason4.Episodes" flex-sm="30" ng-show="formData.GotSeason == 'GoT Season 4' ">
+        <div flex-gt-sm="10" flex-sm="5" class="table-number">{{episode.Episode}}</div>
+        <div flex-gt-sm="55" flex-sm="10" class="episode-col">{{episode.Title}}</div>
+        <div flex-gt-sm="15" class="released-col" hide-xs hide-sm>{{episode.Released | date}}</div>
+        <div flex-gt-sm="15" class="table-number" hide-xs hide-sm>{{episode.imdbRating}}</div>
     </div>
 
-    <div layout-gt-sm="row" class="table-body" ng-repeat="episode in vm.gotseason5.Episodes" ng-show="formData.GotSeason == 'GoT Season 5' ">
-        <div flex="10" class="table-number">{{episode.Episode}}</div>
-        <div flex="55">{{episode.Title}}</div>
-        <div flex="15">{{episode.Released | date}}</div>
-        <div flex="15" class="table-number">{{episode.imdbRating}}</div>
+    <div layout-gt-sm="row" layout-sm="column" class="table-body" ng-repeat="episode in vm.gotseason5.Episodes" flex-sm="30" ng-show="formData.GotSeason == 'GoT Season 5' ">
+        <div flex-gt-sm="10" flex-sm="5" class="table-number">{{episode.Episode}}</div>
+        <div flex-gt-sm="55" flex-sm="10" class="episode-col">{{episode.Title}}</div>
+        <div flex-gt-sm="15" class="released-col" hide-xs hide-sm>{{episode.Released | date}}</div>
+        <div flex-gt-sm="15" class="table-number" hide-xs hide-sm>{{episode.imdbRating}}</div>
     </div>
 
-    <div layout-gt-sm="row" class="table-body" ng-repeat="episode in vm.gotseason6.Episodes" ng-show="formData.GotSeason == 'GoT Season 6' ">
-        <div flex="10" class="table-number">{{episode.Episode}}</div>
-        <div flex="55">{{episode.Title}}</div>
-        <div flex="15">{{episode.Released | date}}</div>
-        <div flex="15" class="table-number">{{episode.imdbRating}}</div>
+    <div layout-gt-sm="row" layout-sm="column" class="table-body" ng-repeat="episode in vm.gotseason6.Episodes" flex-sm="30" ng-show="formData.GotSeason == 'GoT Season 6' ">
+        <div flex-gt-sm="10" flex-sm="5" class="table-number">{{episode.Episode}}</div>
+        <div flex-gt-sm="55" flex-sm="10" class="episode-col">{{episode.Title}}</div>
+        <div flex-gt-sm="15" class="released-col" hide-xs hide-sm>{{episode.Released | date}}</div>
+        <div flex-gt-sm="15" class="table-number" hide-xs hide-sm>{{episode.imdbRating}}</div>
     </div>
 </div>
 
@@ -78,18 +82,18 @@
 
 <div layout-gt-sm="row">
 
-    <div flex="10">
+    <div flex-gt-sm="10" flex-xs="50" class="prev-btn">
 
         <md-button class="md-raised md-primary" ui-sref-active="active" ui-sref="form.starwarsmovie">Back</md-button>
     </div>
 
-    <div flex="90">
+    <div flex-gt-sm="90">
         <!-- Spacer //-->
     </div>
 
-    <div flex="10">
+    <div flex-gt-sm="10" flex-xs="50" class="next-btn">
 
-        <md-button class="md-raised md-primary next-btn" ui-sref="form.food">Next</md-button>
+        <md-button class="md-raised md-primary" ui-sref="form.food">Next</md-button>
     </div>
 
 </div>

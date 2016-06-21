@@ -42,7 +42,7 @@ gulp.task('styles', function(){
         }}))
       .pipe(sass())
       .pipe(autoprefixer('last 2 versions'))
-      .pipe(gulp.dest('app/assets/build/css/'))
+      .pipe(gulp.dest('app/dist/css/'))
       .pipe(rename({suffix: '.min'}))
       .pipe(minifycss())
       .pipe(gulp.dest('app/dist/css/'))

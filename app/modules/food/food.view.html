@@ -7,7 +7,7 @@
         <md-radio-button
                 ng-repeat="food in vm.foods.items"
                 ng-value="food.title"
-                class="food-radio md-primary" flex="20">
+                class="food-radio md-primary" flex-gt-sm="20">
             <div class="food-image">
                 <img ng-src="{{food.image}}" class="img-responsive" alt="Food Image" />
             </div>
@@ -22,20 +22,20 @@
 
 <md-divider></md-divider>
 
-<div layout-gt-sm="row">
+<div layout-gt-sm="row" >
 
-    <div flex-gt-sm="10">
+    <div flex-gt-sm="15" flex-xs="50" class="prev-btn">
 
         <md-button class="md-raised md-primary" ui-sref-active="active" ui-sref="form.gameofthrones">Back</md-button>
     </div>
 
-    <div flex-gt-sm="90">
+    <div flex-gt-sm="70">
         <!-- Spacer //-->
     </div>
 
-    <div flex-gt-sm="10">
+    <div flex-gt-sm="15" flex-xs="50" class="next-btn">
 
-        <md-button class="md-raised md-primary next-btn" ui-sref="form.review">Next</md-button>
+        <md-button class="md-raised md-primary" ui-sref="form.review">Next</md-button>
     </div>
 
 </div>

@@ -252,21 +252,11 @@ h3 {
 
 @media screen and (max-width: 960px) {
 
-  .movie-item {
-    margin: 0 15px 0 0 !important;
-    display: inline-block;
-  }
 
-  ///////////////////////////////////////// GOT
+  ////////////////// GENERAL
 
-  .got-header {
-    .got-header-poster {
-      margin-bottom: 10px;
-    }
-
-    .got-header-content {
-      padding: 0;
-    }
+  .content {
+    padding: 20px 15px 10px;
   }
 
   //Stats Btns
@@ -275,6 +265,7 @@ h3 {
       margin: 0 6px;
     }
   }
+
   //Table
 
   .table-holder {
@@ -299,6 +290,25 @@ h3 {
   .table-head {
     h3 {
       margin: 25px 0 15px;
+    }
+  }
+
+  ////////////////// STAR WARS
+
+  .movie-item {
+    margin: 0 15px 0 0 !important;
+    display: inline-block;
+  }
+
+  ////////////////// GOT
+
+  .got-header {
+    .got-header-poster {
+      margin-bottom: 10px;
+    }
+
+    .got-header-content {
+      padding: 0;
     }
   }
 

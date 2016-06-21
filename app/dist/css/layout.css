@@ -158,13 +158,8 @@ h3 {
     visibility: visible; } }
 
 @media screen and (max-width: 960px) {
-  .movie-item {
-    margin: 0 15px 0 0 !important;
-    display: inline-block; }
-  .got-header .got-header-poster {
-    margin-bottom: 10px; }
-  .got-header .got-header-content {
-    padding: 0; }
+  .content {
+    padding: 20px 15px 10px; }
   #status-buttons a {
     margin: 0 6px; }
   .table-holder {
@@ -177,4 +172,11 @@ h3 {
     .table-holder .table-body .table-number {
       font-weight: 700; }
   .table-head h3 {
-    margin: 25px 0 15px; } }
+    margin: 25px 0 15px; }
+  .movie-item {
+    margin: 0 15px 0 0 !important;
+    display: inline-block; }
+  .got-header .got-header-poster {
+    margin-bottom: 10px; }
+  .got-header .got-header-content {
+    padding: 0; } }

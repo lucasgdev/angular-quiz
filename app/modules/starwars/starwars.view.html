@@ -1,10 +1,10 @@
 
 <h3 class="margin-bottom-half">Wich of these is yout favorite Star Wars movie?</h3>
 
-<md-radio-group ng-model="formData.swmovie" layout="row" layout-wrap layout-align="center center" class="movie-group">
+<md-radio-group ng-model="formData.swmovie" layout-gt-sm="row" layout-wrap layout-align="center center" class="movie-group">
         <md-radio-button ng-repeat="movie in vm.swmovies.Search | limitTo: 7 | orderBy: 'Year'"
                          ng-value="movie.Title"
-                         aria-label="{{movie.Title}}" flex="20" class="movie-item md-primary">
+                         aria-label="{{movie.Title}}" flex-gt-sm="20" flex-gt-xs="30" flex-xs="40" class="movie-item md-primary">
             <p>{{movie.Title}} ({{movie.Year}})</p>
             <div class="moviePoster">
                 <img ng-src="{{movie.Poster}}" class="img-responsive" alt="Description" />
@@ -19,16 +19,16 @@
 
 <div layout-gt-sm="row">
 
-    <div flex="10">
+    <div flex-gt-sm="10">
 
         <md-button class="md-raised md-primary next-btn" ui-sref="form.profile">Back</md-button>
     </div>
 
-    <div flex="90">
+    <div flex-gt-sm="90">
         <!-- Spacer //-->
     </div>
 
-    <div flex="10">
+    <div flex-gt-sm="10">
 
         <md-button class="md-raised md-primary next-btn" ui-sref="form.gameofthrones">Next</md-button>
     </div>

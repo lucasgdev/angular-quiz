@@ -1,4 +1,4 @@
-/////// FOOD
+///////////////////////////////////////// FOOD
 
 .food-holder {
 
@@ -37,7 +37,9 @@
   }
 }
 
-//////// GOT
+
+
+///////////////////////////////////////// GOT
 
 .got-header {
   .got-header-poster {
@@ -57,28 +59,7 @@
   }
 }
 
-.table-holder {
-  .table-head {
 
-    margin: 20px 0 0;
-    background-color: #c6c6c6;
-
-    .table-title {
-      font-weight: bold;
-      border-bottom: 1px solid #c6c6c6;
-      padding: 10px 15px;
-    }
-  }
-
-  .table-body {
-    padding: 5px 0 5px 20px;
-    background-color: #f5f5f5;
-
-    .table-number {
-      text-align: center;
-    }
-  }
-}
 
 ///////////////////////////////////////// STAR WARS
 
@@ -109,13 +90,15 @@
 
 }
 
+
+
 ///////////////////////////////////////// GENERAL
+
+///////// Document
 
 .page-header {
   margin: 0 0 40px;
 }
-
-
 
 h3 {
   margin: 0 0 55px;
@@ -133,7 +116,8 @@ h3 {
   padding: 20px 35px 10px;
 }
 
-//State BTNS
+
+///////// State BTNS - Numbers
 
 #status-buttons {
 
@@ -175,36 +159,40 @@ h3 {
   }
 }
 
-//ANIMATIONS
 
-#form-views
+///////// Animations
 
-{ width:auto; }
+#form-views {
+  width:auto;
+}
 
-/* basic styling for entering and leaving */
-/* left and right added to ensure full width */
 #form-views.ng-enter,
-#form-views.ng-leave      { position:absolute; left:30px; right:30px;
-  transition:0.5s all linear; -moz-transition:0.5s all linear; -webkit-transition:0.5s all linear;
+#form-views.ng-leave  {
+  position:absolute;
+  left:30px;
+  right:30px;
+  transition:0.5s all linear;
+  -moz-transition:0.5s all linear;
+  -webkit-transition:0.5s all linear;
 }
 
 /* enter animation */
-#form-views.ng-enter            {
+#form-views.ng-enter {
   -webkit-animation:showUp 0.5s both linear;
   -moz-animation:showUp 0.5s both linear;
   animation:showUp 0.5s both linear;
 }
 
 /* leave animation */
-#form-views.ng-leave            {
+#form-views.ng-leave {
   -webkit-animation:getOut 0.5s both linear;
   -moz-animation:getOut 0.5s both linear;
   animation:getOut 0.5s both linear;
 }
 
-/* ANIMATIONS
+/* ANIMATIONS KEYFRAMES */
 
-/* slide out to the left */
+/* get out */
 @keyframes getOut {
   to      { opacity: 0; visibility: hidden }
 }
@@ -215,7 +203,7 @@ h3 {
   to      { opacity: 0; visibility: hidden }
 }
 
-/* slide in from the right */
+/* show Up */
 @keyframes showUp {
   from    { opacity: 0; visibility: hidden }
   to      { opacity: 1; visibility: visible }
@@ -227,4 +215,15 @@ h3 {
 @-webkit-keyframes showUp {
   from    { opacity: 0; visibility: hidden }
   to      { opacity: 1; visibility: visible }
+}
+
+///////////////////////////////////////// MEDIA QUERIES
+
+@media screen and (max-width: 960px) {
+
+  .movie-item {
+    margin: 0 15px 0 0 !important;
+    display: inline-block;
+  }
+
 }

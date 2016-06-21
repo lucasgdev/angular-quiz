@@ -39,7 +39,7 @@ angular.module('FormApp', ['ngAnimate', 'ui.router', 'ngMaterial', 'SWModule', '
 
             .state('form.review', {
                 url: '/review',
-                templateUrl: 'review.html',
+                templateUrl: 'review.view.html',
             });
 
         // catch all route

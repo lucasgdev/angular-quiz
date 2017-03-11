@@ -1,6 +1,6 @@
-# CI&T Test - Jun, 16
+# Angular Quiz
 
-This is a test with a form made for CI&T.
+This is a little quiz web app made with Angular for studying.
 
 Main used Technologies, Methodologies, Tools and Utilities:
 
@@ -11,6 +11,10 @@ Main used Technologies, Methodologies, Tools and Utilities:
 * NPM
 * Ui-Router
 * BEM
+
+API:
+
+* http://www.omdbapi.com
 
 
 To run the application, go to Terminal and reach the cloned repository, then run commands:
